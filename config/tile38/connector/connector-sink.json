@@ -1,0 +1,18 @@
+{
+  "name": "tile38-sink",
+  "config": {
+    "tasks.max": "1",
+    "connector.class": "guru.bonacci.kafka.connect.tile38.Tile38SinkConnector",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "topics": "places,positions",
+    "tile38.topic.places": "SET place event.placeId OBJECT event.geometry",
+    "tile38.topic.positions": "SET position event.userId POINT event.lat event.lng",
+    "tile38.host": "tile38",
+    "tile38.port": 9851,
+    "tile38.password": "foo123",
+    "behavior.on.error": "log",
+    "flush.timeout.ms": "1000"
+  }
+}
