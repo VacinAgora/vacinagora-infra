@@ -2,7 +2,7 @@
 version: '3'
 services:
   tile38:
-    image: tile38/tile38
+    image: tile38/tile38:1.23.0
     hostname: tile38
     container_name: tile38
     ports:

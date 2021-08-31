@@ -1,1 +1,5 @@
 .idea/
+
+# Tile38 config
+config/tile38/data/appendonly.aof
+config/tile38/data/queue.db
